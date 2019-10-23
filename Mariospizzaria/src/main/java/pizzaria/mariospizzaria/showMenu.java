@@ -18,7 +18,7 @@ public class showMenu {
     public static void main(String[] args) {
         // Opretter data til tabellen
         String[] headings
-                = new String[]{"Number", "Name", "Pris", "Ingrediens", "Ingrediens", "Ingrediens", "Ingrediens", "Ingrediens", "Ingrediens", "Ingrediens"};
+                = new String[]{"Nummer", "Navn", "Pris", "Ingrediens", "Ingrediens", "Ingrediens", "Ingrediens", "Ingrediens", "Ingrediens", "Ingrediens"};
         Object[][] data = new Object[][]{ //opretter et object med data
             {"1", "Vesuvio", "57", "Tomatsauce", "Ost", "Skinke", "Oregano", "*", "*", "*"},
             {"2", "Amerikaner", "53", "Tomatsauce", "Ost", "Oksefars", "Oregano", "*", "*", "*"},
