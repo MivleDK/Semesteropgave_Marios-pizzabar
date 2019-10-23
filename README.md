@@ -13,8 +13,9 @@
 #### Mick
 
 - Rette UML
-- 
+- Finish på user cases
 
 #### Morten
 
 - Oprette netbeans projekt og ligge det på github
+  Skal indeholde alle klasse-filer så gruppen kan arbejde med hver sin(e) source
