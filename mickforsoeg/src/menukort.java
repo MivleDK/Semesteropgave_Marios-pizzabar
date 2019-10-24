@@ -7,7 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class menukort {
+public class menukort extends bestillinger {
 
     //Init ArrayList til at holde menukortet
     protected ArrayList<String> menukortArr = new ArrayList<>();
@@ -30,8 +30,8 @@ public class menukort {
         }
     }
 
-    protected void getPizza(int i){
-        System.out.println(menukortArr.get(i-1));
+    protected String getPizza(int i){
+        return menukortArr.get(i-1);
     }
 
     protected void getMenukort(){

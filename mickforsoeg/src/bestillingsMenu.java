@@ -8,15 +8,13 @@ import java.util.Scanner;
 
 public class bestillingsMenu {
 
-    bestillinger bestillinger = new bestillinger();
-
-/**
+    /**
  * Forudsætter: Ingenting
  * Metodekald: Kaldes af hovedmenu
  * Output: Sender brugeren videre til den pågældende klasse valgt i visBestillingsMenu()
  * */
 
-    protected void visBestillingsMenu() throws IOException {
+    protected static void visBestillingsMenu() throws IOException {
         System.out.println("\n");
         System.out.println("*** Bestilling af Pizza ***");
         System.out.println("Tast 1 for at tilføje en ny ordre");
