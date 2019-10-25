@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="705d2847-30e7-4772-891e-84a36515f15f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../../../pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Afhentning.java" beforeDir="false" afterPath="$PROJECT_DIR$/Afhentning.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bestilling.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bestilling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bestillingsliste.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bestillingsliste.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Menukort.java" beforeDir="false" afterPath="$PROJECT_DIR$/Menukort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pizza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PizzaSuper.java" beforeDir="false" afterPath="$PROJECT_DIR$/PizzaSuper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShowMenuKort.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShowMenuKort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Statistik.java" beforeDir="false" afterPath="$PROJECT_DIR$/Statistik.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../target/classes/pizzaria/mariospizzaria/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../target/classes/pizzaria/mariospizzaria/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../target/classes/pizzaria/mariospizzaria/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../target/classes/pizzaria/mariospizzaria/Menukort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../menu2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../mickforsoeg/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../mickforsoeg/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../mickforsoeg/.idea/dictionaries/Mickl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../mickforsoeg/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../mickforsoeg/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../mickforsoeg/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../mickforsoeg/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../mickforsoeg/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../mickforsoeg/mickforsoeg.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../mickforsoeg/out/production/mickforsoeg/META-INF (1)/mickforsoeg.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../mickforsoeg/out/production/mickforsoeg/META-INF/mickforsoeg.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../mickforsoeg/out/production/mickforsoeg/TilfoejBestilling.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../mickforsoeg/out/production/mickforsoeg/bestillingsMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../mickforsoeg/out/production/mickforsoeg/bestillingsMenuTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../mickforsoeg/out/production/mickforsoeg/main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../mickforsoeg/out/production/mickforsoeg/menukort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../mickforsoeg/src/TilfoejBestilling.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../mickforsoeg/src/bestillingsMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../mickforsoeg/src/bestillingsMenuTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../mickforsoeg/src/main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../mickforsoeg/src/menukort.java" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../.." />
+  </component>
+  <component name="ProjectId" id="1SgtmpN0k4dhjMv68uR5MZXT3Vq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="705d2847-30e7-4772-891e-84a36515f15f" name="Default Changelist" comment="" />
+      <created>1571997227175</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571997227175</updated>
+      <workItem from="1571997228693" duration="105000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

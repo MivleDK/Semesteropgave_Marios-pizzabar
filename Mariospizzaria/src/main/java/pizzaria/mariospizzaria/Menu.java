@@ -8,6 +8,7 @@ package pizzaria.mariospizzaria;
 /*
  * @author Amazingh0rse
  */
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Menu {
@@ -34,13 +35,13 @@ public class Menu {
         System.out.println("****************************************************************************************");
     }
 
-    public void startMenu() {
+    public void startMenu() throws IOException {
         String valg = getInput();
         while (!valg.equals("q")) {
             switch (valg) {
                 case "1":// deal med s
-                    bestillingsMenu bestillingsmenu = new bestillingsMenu();
-                    bestillingsmenu.visBestillingsMenu
+                    BestillingsMenu bestillingsmenu = new BestillingsMenu();
+                    bestillingsmenu.visBestillingsMenu();
                     break;
                 case "2":
                     System.out.println("Q Afslut");
