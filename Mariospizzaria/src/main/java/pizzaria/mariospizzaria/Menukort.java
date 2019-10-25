@@ -1,6 +1,4 @@
-package pizzaria.mariospizzaria; /**@author: Mick Larsen
- * menukort klasen læser menukortet fra en fil.
- */
+package pizzaria.mariospizzaria;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -19,11 +17,12 @@ public class Menukort {
      *Metodekald: Ingen parametre
      *
      * Output:
-     * */
+     *
+     * @throws java.io.IOException */
     public Menukort() throws IOException {
         BufferedReader objReader = null;
         String strCurrentLine;
-        objReader = new BufferedReader(new FileReader("C:\\Users\\mla\\Google Drev\\Datamatiker\\1_semester\\Semesteropgave_Marios pizzabar\\Mariospizzaria\\src\\main\\java\\pizzaria\\mariospizzaria\\menu2.txt"));
+        objReader = new BufferedReader(new FileReader("\\menu2.txt"));
 
         while ((strCurrentLine = objReader.readLine()) != null){
             menukortArr.add(strCurrentLine);
