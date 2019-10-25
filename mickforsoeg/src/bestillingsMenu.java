@@ -41,7 +41,8 @@ public class bestillingsMenu {
             tilfoej.visBestillinger();
 
         } else if(menuValg == 0){
-            //Gå til hovedmenu
+            Menu.vismenu();
+            Menu.startMenu();
         } else {
             System.out.println("Du har valgt et ugyldigt menupunkt - Prøv igen");
             visBestillingsMenu();
