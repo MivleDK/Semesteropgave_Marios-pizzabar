@@ -1,10 +1,23 @@
+/*
+ CPH Business 2019
+Semesteropgave Marios-pizzabar
+Alexander Pihl, Benjamin Iglesias, Mick Larsen, Morten Rasmussen
+ */
+package pizzaria.mariospizzaria;
+
+/*
+ * @author Amazingh0rse
+ */
 import java.io.IOException;
 
-public class main{
+public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        bestillingsMenu bestillingsmenu = new bestillingsMenu();
-        bestillingsmenu.visBestillingsMenu();
+        Menu newMenu = new Menu();
+        newMenu.visMenu();
+        newMenu.startMenu();
+        //bestillingsMenu bestillingsmenu = new bestillingsMenu();
+        //bestillingsmenu.visBestillingsMenu();
     }
 }

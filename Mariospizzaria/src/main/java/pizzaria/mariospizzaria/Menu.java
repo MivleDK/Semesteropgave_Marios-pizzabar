@@ -40,7 +40,7 @@ public class Menu {
             switch (valg) {
                 case "1":// deal med s
                     bestillingsMenu bestillingsmenu = new bestillingsMenu();
-                    bestillingsmenu.visBestillingsMenu
+                    bestillingsMenu.visBestillingsMenu();
                     break;
                 case "2":
                     System.out.println("Q Afslut");
