@@ -7,7 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class menukort extends bestillinger {
+public class menukort {
 
     //Init ArrayList til at holde menukortet
     protected ArrayList<String> menukortArr = new ArrayList<>();
@@ -23,7 +23,7 @@ public class menukort extends bestillinger {
     public menukort() throws IOException {
         BufferedReader objReader = null;
         String strCurrentLine;
-        objReader = new BufferedReader(new FileReader("B:\\google drive\\Datamatiker\\1_semester\\Semesteropgave_Marios pizzabar\\menu2.txt"));
+        objReader = new BufferedReader(new FileReader("C:\\Users\\mla\\Google Drev\\Datamatiker\\1_semester\\Semesteropgave_Marios pizzabar\\menu2.txt"));
 
         while ((strCurrentLine = objReader.readLine()) != null){
             menukortArr.add(strCurrentLine);
@@ -31,13 +31,8 @@ public class menukort extends bestillinger {
     }
 
     protected String getPizza(int i){
+
         return menukortArr.get(i-1);
-    }
-
-    protected void getMenukort(){
-
-        for(int i = 0; i < menukortArr.size(); i++)
-        System.out.println(menukortArr.get(i));
     }
 
 }

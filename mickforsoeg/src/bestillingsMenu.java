@@ -14,7 +14,11 @@ public class bestillingsMenu {
  * Output: Sender brugeren videre til den pågældende klasse valgt i visBestillingsMenu()
  * */
 
-    protected static void visBestillingsMenu() throws IOException {
+    protected void visBestillingsMenu() throws IOException {
+
+        //Init TilFoejBestilling klassen
+        TilfoejBestilling tilfoej = new TilfoejBestilling();
+
         System.out.println("\n");
         System.out.println("*** Bestilling af Pizza ***");
         System.out.println("Tast 1 for at tilføje en ny ordre");
@@ -28,38 +32,23 @@ public class bestillingsMenu {
         int menuValg = sc.nextInt();
 
         if (menuValg == 1){
-            bestillinger.tilfoejBestilling();
-
-        } else if(menuValg ==2 ){
-            bestillinger.fjernBestilling();
+            tilfoej.tilfoejBestilling();
 
         } else if(menuValg == 3){
-            bestillinger.getMenukort();
-            visBestillingsMenu();
+            //Vis menukort
 
         } else if(menuValg == 4){
-            bestillinger.seBestillingsliste();
+            tilfoej.visBestillinger();
 
         } else if(menuValg == 0){
-            bestillinger.gaaTilHovedMenu();
+            //Gå til hovedmenu
         } else {
             System.out.println("Du har valgt et ugyldigt menupunkt - Prøv igen");
             visBestillingsMenu();
         }
 }
 
-
-
-
-
-
-
-
     //To-Do
     //protected void retBestilling(){}
-
-
-
-
 
 }
