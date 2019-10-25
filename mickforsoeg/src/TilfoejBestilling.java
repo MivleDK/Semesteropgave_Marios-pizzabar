@@ -28,8 +28,6 @@ public class TilfoejBestilling {
         System.out.println("Du har valgt: " + menu.getPizza(Integer.parseInt(valgtPizza)));
         bestillingsMenu.visBestillingsMenu();
 
-
-
     }
 
     public void visBestillinger() throws IOException {

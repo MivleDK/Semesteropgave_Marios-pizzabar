@@ -35,4 +35,14 @@ public class menukort {
         return menukortArr.get(i-1);
     }
 
+    public double getPris(int n) throws IOException{ //Implementer scanner
+        n= n-1 ;
+        String test = (String) menukortArr.get(n);
+        String[] splited = test.split("\\s+");
+        String temp = splited[2];
+        double pris = Double.parseDouble( temp );
+
+        return pris;
+    }
+
 }
