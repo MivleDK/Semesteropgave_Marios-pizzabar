@@ -1,0 +1,51 @@
+package marios_pizzaria;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class BestillingsMenu {
+
+    /**
+ * Forudsætter: Ingenting
+ * Metodekald: Kaldes af hovedmenu
+ * Output: Sender brugeren videre til den pågældende klasse valgt i visBestillingsMenu()
+ * */
+
+    protected void visBestillingsMenu() throws IOException {
+
+        //Init TilFoejBestilling klassen
+        TilfoejBestilling tilfoej = new TilfoejBestilling();
+
+        System.out.println("\n");
+        System.out.println("*** Bestilling af Pizza ***");
+        System.out.println("Tast 1 for at tilføje en ny ordre");
+        System.out.println("Tast 2 for at fjerne en ordre");
+        System.out.println("Tast 3 for at se menukortet");
+        System.out.println("Tast 4 for at se bestillingslisten");
+        //System.out.println("Tast 5 for at rette en ordre");
+        System.out.println("Tast 0 for at gå til hovedmenuen");
+
+        Scanner sc = new Scanner(System.in);
+        int menuValg = sc.nextInt();
+
+        if (menuValg == 1){
+            tilfoej.tilfoejBestilling();
+
+        } else if(menuValg == 3){
+            //Vis menukort
+
+        } else if(menuValg == 4){
+            tilfoej.visBestillinger();
+
+        } else if(menuValg == 0){
+
+        } else {
+            System.out.println("Du har valgt et ugyldigt menupunkt - Prøv igen");
+            visBestillingsMenu();
+        }
+}
+
+    //To-Do
+    //protected void retBestilling(){}
+
+}
