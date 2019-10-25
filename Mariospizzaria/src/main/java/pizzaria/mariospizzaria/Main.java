@@ -17,8 +17,8 @@ public class Main {
         Menu newMenu = new Menu();
         newMenu.visMenu();
         newMenu.startMenu();
-        bestillingsMenu bestillingsmenu = new bestillingsMenu();
-        bestillingsmenu.visBestillingsMenu
+        //bestillingsMenu bestillingsmenu = new bestillingsMenu();
+        //bestillingsmenu.visBestillingsMenu
     }
 
 }
