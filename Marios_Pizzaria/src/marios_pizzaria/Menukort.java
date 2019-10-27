@@ -44,4 +44,13 @@ public class Menukort {
         return pris;
     }
 
+    //@MLA: Outputter hele menukortet
+    protected void getMenu(){
+        for (int i = 0; i < menukortArr.size(); i++){
+            System.out.println(menukortArr.get(i));
+            System.out.println("\n");
+        }
+        
+    }
+
 }

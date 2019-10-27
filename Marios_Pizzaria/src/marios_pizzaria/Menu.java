@@ -36,34 +36,48 @@ public class Menu {
     }
 
     public void startMenu() throws IOException {
-        String valg = getInput();
-        while (!valg.equals("q")) {
-            switch (valg) {
-                case "1":// deal med s
-                    BestillingsMenu bestillingsmenu = new BestillingsMenu();
-                    bestillingsmenu.visBestillingsMenu();
-                    break;
-                case "2":
-                    System.out.println("Q Afslut");
-                //valg = getInput("v for at få vist " + spiller1.getNavn() + "'s slag");
-                //break;
-                case "3":
+        String valg = "1";
+        valg = getInput();
+
+        switch (valg) {
+            case "1":// deal med s
+                BestillingsMenu bestillingsmenu = new BestillingsMenu();
+                bestillingsmenu.visBestillingsMenu();
+                valg = "q";
+                break;
+            case "2":
+                System.out.println("Virker ikke endnu");
+                valg = "q";
+                break;
+            case "3":
+                System.out.println("Virker ikke endnu");
+                valg = "q";
+                break;
+
+            /* @MLA: Viser menukortet i en GUI for sig selv.
                     ShowMenuKort newMenuKort = new ShowMenuKort();
                     newMenuKort.ShowMenuKort();
                     visMenu();
                     valg = getInput();
-                    break;
-                case "4":
-                //currentBaeger = spiller2.getBaeger();
-                //currentBaeger.ryst();
-                //valg = getInput("v for at få vist " + spiller2.getNavn() + "'s slag ELLER f for at få vist vinder");
-                //break;
-                case "5":
-                case "q":
-                    break; //afslut
-                default:
-            }
+             */
+            case "4":
+                System.out.println("Virker ikke endnu");
+                valg = "q";
+                break;
+
+            case "q":
+                //valg = "q";
+                System.exit(0);
+                break;
+            default:
+                valg = "z";
+                System.out.println("Vælg et punkt der findes på menuen");
+                startMenu();
         }
+
+        visMenu();
+        startMenu();
+
     }
 
     public static String getInput() {
