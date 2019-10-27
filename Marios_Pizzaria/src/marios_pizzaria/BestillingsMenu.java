@@ -6,11 +6,10 @@ import java.util.Scanner;
 public class BestillingsMenu {
 
     /**
- * Forudsætter: Ingenting
- * Metodekald: Kaldes af hovedmenu
- * Output: Sender brugeren videre til den pågældende klasse valgt i visBestillingsMenu()
- * */
-
+     * Forudsætter: Ingenting Metodekald: Kaldes af hovedmenu Output: Sender
+     * brugeren videre til den pågældende klasse valgt i visBestillingsMenu()
+     *
+     */
     protected void visBestillingsMenu() throws IOException {
 
         //Init TilFoejBestilling klassen
@@ -23,29 +22,59 @@ public class BestillingsMenu {
         System.out.println("Tast 3 for at se menukortet");
         System.out.println("Tast 4 for at se bestillingslisten");
         //System.out.println("Tast 5 for at rette en ordre");
+        System.out.println("\n");
         System.out.println("Tast 0 for at gå til hovedmenuen");
 
-        Scanner sc = new Scanner(System.in);
-        int menuValg = sc.nextInt();
+        String menuValg = getInput();
 
-        if (menuValg == 1){
-            tilfoej.tilfoejBestilling();
+        while (!menuValg.equals("q")) {
+            switch (menuValg) {
+                case "1":
+                    tilfoej.tilfoejBestilling();
+                    break;
 
-        } else if(menuValg == 3){
-            //Vis menukort
+                case "2":
+                    System.out.println("Q Afslut");
+                    menuValg = "1";
+                    break;
 
-        } else if(menuValg == 4){
-            tilfoej.visBestillinger();
+                case "3":
+                    System.out.println("Q Afslut");
+                    menuValg = "1";
+                    break;
 
-        } else if(menuValg == 0){
+                case "4":
+                    System.out.println("Q Afslut");
+                    menuValg = "1";
+                    break;
 
-        } else {
-            System.out.println("Du har valgt et ugyldigt menupunkt - Prøv igen");
-            visBestillingsMenu();
+                /* Nice-To-Have: Ret en bestilling
+                case "5":
+                
+                break;                
+                 */
+                case "0":
+                    menuValg = "q";
+                    break;
+
+                default:
+                    System.out.println("Vælg et punkt fra menuen");
+                    visBestillingsMenu();
+                    break;
+            }
         }
-}
+        hovedMenu();
+    }
 
-    //To-Do
-    //protected void retBestilling(){}
+    protected String getInput() {
+        Scanner sc = new Scanner(System.in);
+        String menuValg = sc.nextLine();
+        return menuValg;
+    }
 
+    protected void hovedMenu() throws IOException {
+        Menu menu = new Menu();
+        menu.visMenu();
+        menu.startMenu();
+    }
 }
