@@ -18,14 +18,7 @@ public class BestillingsMenu {
      * brugeren videre til den pågældende klasse valgt i visBestillingsMenu()
      *
      */
-    protected void visBestillingsMenu() throws IOException {
-
-        Menu newMenu = new Menu();
-        newMenu.visMenu1();
-
-        //Init TilFoejBestilling klassen
-        TilfoejBestilling tilfoej = new TilfoejBestilling();
-
+    protected void visBestillingsMenu2() {
         System.out.println("");
         System.out.println("Bestilling af Pizza");
         System.out.println("Tryk 1 for at tilføje en ny ordre");
@@ -37,6 +30,17 @@ public class BestillingsMenu {
         System.out.println("Tryk 0 for at gå til hovedmenuen");
         System.out.println("****************************************************************************************");
         System.out.println("Tryk på en tast og derefter Enter: ");
+    }
+
+    protected void visBestillingsMenu() throws IOException {
+
+        Menu newMenu = new Menu();
+        newMenu.visClear();
+        newMenu.visLogo();
+        visBestillingsMenu2();
+        //Init TilFoejBestilling klassen
+        TilfoejBestilling tilfoej = new TilfoejBestilling();
+
         String menuValg = getInput();
 
         while (!menuValg.equals("q")) {
@@ -74,6 +78,7 @@ public class BestillingsMenu {
                 default:
                     System.out.println("Vælg et punkt fra menuen");
                     visBestillingsMenu();
+
                     break;
             }
         }
@@ -88,8 +93,9 @@ public class BestillingsMenu {
 
     protected void hovedMenu() throws IOException {
         Menu menu = new Menu();
+        menu.visClear();
+        menu.visLogo();
         menu.visMenu1();
-        menu.visMenu2();
         menu.startMenu();
     }
 }

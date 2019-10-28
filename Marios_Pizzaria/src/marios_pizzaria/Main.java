@@ -12,8 +12,9 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         Menu newMenu = new Menu();
+        newMenu.visClear();
+        newMenu.visLogo();
         newMenu.visMenu1();
-        newMenu.visMenu2();
         newMenu.startMenu();
 
         //bestillingsMenu bestillingsmenu = new bestillingsMenu();

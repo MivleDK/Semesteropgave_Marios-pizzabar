@@ -15,7 +15,32 @@ public class Menu {
 
     protected static Scanner scan = new Scanner(System.in);
 
-    protected void visMenu1() {                 //Viser firma logoet
+    protected void visClear() {                 //clear consollen
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+    }
+
+    protected void visLogo() {      //Viser firma logoet
         System.out.println("****************************************************************************************");
         System.out.println("*  __  __               _                        _                  _                  *");
         System.out.println("* |  \\/  |             (_)                      (_)                | |                 *");
@@ -29,7 +54,7 @@ public class Menu {
 
     }
 
-    protected void visMenu2() {             //viser hovedemenuen
+    protected void visMenu1() {             //viser hovedemenuen
         System.out.println("");
         System.out.println("Hovedemenu");
         System.out.println("Tryk 1 for at se Bestillingslisten");
@@ -77,9 +102,9 @@ public class Menu {
                 System.out.println("Vælg et punkt der findes på menuen");
                 startMenu();
         }
-
+        visClear();
+        visLogo();
         visMenu1();
-        visMenu2();
         startMenu();
 
     }

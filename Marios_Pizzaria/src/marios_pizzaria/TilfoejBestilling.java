@@ -24,7 +24,11 @@ public class TilfoejBestilling {
     ArrayList<String> bestillingsListe = new ArrayList<>();
 
     protected void tilfoejBestilling() throws IOException {
+        Menu menu2 = new Menu();
+        menu2.visClear();
+        menu2.visLogo();
         System.out.println("Indtast nummeret på pizzaen der skal tilføjes til bestillingen");
+
         Scanner sc = new Scanner(System.in);
         String valgtPizza = sc.next();
         bestillingsListe.add(menu.getPizza(Integer.parseInt(valgtPizza)));
