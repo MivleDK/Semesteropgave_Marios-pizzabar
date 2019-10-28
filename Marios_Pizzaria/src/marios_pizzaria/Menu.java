@@ -99,7 +99,7 @@ public class Menu {
                 break;
             default:
                 valg = "q";
-                System.out.println("Vælg et punkt der findes på menuen");
+                System.out.println("Vælg et gyldigt punkt fra menuen");
                 startMenu();
         }
         visClear();
