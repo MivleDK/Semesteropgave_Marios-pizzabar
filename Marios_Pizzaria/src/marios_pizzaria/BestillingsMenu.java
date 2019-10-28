@@ -31,6 +31,7 @@ public class BestillingsMenu {
             switch (menuValg) {
                 case "1":
                     tilfoej.tilfoejBestilling();
+                    menuValg = "q";
                     break;
 
                 case "2":
@@ -44,8 +45,8 @@ public class BestillingsMenu {
                     break;
 
                 case "4":
-                    System.out.println("Q Afslut");
-                    menuValg = "1";
+                    tilfoej.visBestillinger();
+                    menuValg = "q";
                     break;
 
                 /* Nice-To-Have: Ret en bestilling
@@ -63,7 +64,7 @@ public class BestillingsMenu {
                     break;
             }
         }
-        hovedMenu();
+       // hovedMenu();
     }
 
     protected String getInput() {
