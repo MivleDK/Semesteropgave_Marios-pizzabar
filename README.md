@@ -8,3 +8,8 @@ Alexander, Benjamin, Mick, Morten
 - fjern bestilling (telefonnummer)
 - Implementer statistik
 - Implementer test 
+
+### Kendte fejl<br>
+
+- Tilføjer man en pizza som ikke findes på kortet (>15) crasher programmet
+
