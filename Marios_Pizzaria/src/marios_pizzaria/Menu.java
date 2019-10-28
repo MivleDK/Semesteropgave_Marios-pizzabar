@@ -61,15 +61,10 @@ public class Menu {
                     valg = getInput();
              */
             case "4":
-<<<<<<< HEAD
                 Statistik vis = new Statistik();
-                vis.visStatistik();
+                vis.visStatistik();           
                 //System.out.println("Virker ikke endnu");
                 //valg = "q";
-=======
-                System.out.println("Virker ikke endnu");
-                valg = "q";
->>>>>>> origin/master
                 break;
 
             case "q":

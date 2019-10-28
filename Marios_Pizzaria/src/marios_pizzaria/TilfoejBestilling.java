@@ -1,4 +1,7 @@
-package marios_pizzaria; /**@Author: Mick Larsen
+package marios_pizzaria; 
+
+/*
+*@Author: Mick Larsen
  *
  * bestillinger klassen håndterer bestillingen
  */
@@ -19,27 +22,19 @@ public class TilfoejBestilling {
 
     //Init array til at holde alle bestillinger
     ArrayList<String> bestillingsListe = new ArrayList<>();
-
-<<<<<<< HEAD
     //Init statistik klasse til at opdatere statistik
 
-
-
-=======
->>>>>>> origin/master
     public void tilfoejBestilling() throws IOException {
         System.out.println("Indtast nummeret på pizzaen der skal tilføjes til bestillingen");
         Scanner sc = new Scanner(System.in);
         String valgtPizza = sc.next();
         bestillingsListe.add(menu.getPizza(Integer.parseInt(valgtPizza)));
         System.out.println("Du har valgt: " + menu.getPizza(Integer.parseInt(valgtPizza)));
-<<<<<<< HEAD
+
 
         Statistik stat = new Statistik();
         stat.skrivStatistik(menu.getPizza(Integer.parseInt(valgtPizza)));
 
-=======
->>>>>>> origin/master
         bestillingsMenu.visBestillingsMenu();
 
     }
@@ -48,10 +43,4 @@ public class TilfoejBestilling {
         System.out.println(bestillingsListe.toString());
 
     }
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> origin/master
 }

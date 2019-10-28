@@ -9,11 +9,6 @@ public class Main{
         Menu newMenu = new Menu();
         newMenu.visMenu();
         newMenu.startMenu();
-<<<<<<< HEAD
-        
-=======
-
->>>>>>> origin/master
         //bestillingsMenu bestillingsmenu = new bestillingsMenu();
         //bestillingsmenu.visBestillingsMenu();
     }

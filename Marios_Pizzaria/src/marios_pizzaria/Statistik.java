@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-package marios_pizzaria;
 
-=======
->>>>>>> origin/master
+package marios_pizzaria;
 /*
  CPH Business 2019
 Semesteropgave Marios-pizzabar
@@ -53,14 +50,3 @@ public class Statistik {
         }
     }
 }
-=======
- */
-package marios_pizzaria;
-
-/*
- * @author Amazingh0rse
- */
-public class Statistik {
-
-}
->>>>>>> origin/master
