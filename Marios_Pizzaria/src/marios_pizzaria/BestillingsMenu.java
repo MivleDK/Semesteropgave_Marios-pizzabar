@@ -15,7 +15,6 @@ public class BestillingsMenu {
         //Init TilFoejBestilling klassen
         TilfoejBestilling tilfoej = new TilfoejBestilling();
 
-        System.out.println("\n");
         System.out.println("*** Bestilling af Pizza ***");
         System.out.println("Tast 1 for at tilføje en ny ordre");
         System.out.println("Tast 2 for at fjerne en ordre");

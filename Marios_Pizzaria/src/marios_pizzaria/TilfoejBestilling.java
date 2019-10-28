@@ -20,57 +20,78 @@ public class TilfoejBestilling {
     //Init bestillingsmenu så den kan vises efter en bestilling er håndteret
     BestillingsMenu bestillingsMenu = new BestillingsMenu();
 
-    //Init array til at holde alle bestillinger
+    //Init array til at holde alle bestillinger. Hver bestilling ligges i sit eget array.
     static ArrayList<ArrayList<String>> bestillingsListe = new ArrayList<ArrayList<String>>();
+       static ArrayList<String> bestillingsListe2 = new ArrayList<>();
+
+    boolean bestilMere = true;
+
+    Scanner sc = new Scanner(System.in);
 
     //Init statistik klasse til at opdatere statistik
     public void tilfoejBestilling() throws IOException {
-        Scanner sc = new Scanner(System.in);
-        ArrayList<String> denneBestilling = new ArrayList<>();
 
-        System.out.println("Indtast telefonnummeret til ordren");
+      //  ArrayList<String> denneBestilling = new ArrayList<>();
+
+        System.out.print("Indtast telefonnummeret til ordren (Format: 12345678): ");
         String ordreNr = sc.next();
-        denneBestilling.add(ordreNr);
-        
-        System.out.println("Indtast afhentningstidspunkt");
+        //bestillingsListe2.add(ordreNr);
+
+        System.out.print("Indtast afhentningstidspunkt (Format: ttmm): ");
         String afhentningstidspunkt = sc.next();
-        denneBestilling.add(afhentningstidspunkt);
+        //bestillingsListe2.add(afhentningstidspunkt);
 
         //AFHENTNINGSTIDSPUNKT
-        System.out.println("Indtast nummeret på pizzaen der skal tilføjes til bestillingen");
+        System.out.print("Indtast nummeret på pizzaen der skal tilføjes til bestillingen: ");
+
+        String ordreInfo = ordreNr + " " + afhentningstidspunkt;
         
-
-
-        boolean janej = true;
-
-        while (janej) {
+        bestillingsListe2.add(ordreInfo);
+        
+        while (bestilMere) {
 
             String valgtPizza = sc.next();
-            denneBestilling.add(menu.getPizza(Integer.parseInt(valgtPizza)));
 
-            System.out.println("Du har valgt: " + menu.getPizza(Integer.parseInt(valgtPizza)));
+            String valgtePizzaString = menu.getPizza(Integer.parseInt(valgtPizza));
+            bestillingsListe2.add(valgtePizzaString);
 
-            bestillingsListe.add(denneBestilling);
+            System.out.println("Du har valgt: " + valgtePizzaString);
 
+            //Opdaterer statistik-filen
             Statistik stat = new Statistik();
-            stat.skrivStatistik(menu.getPizza(Integer.parseInt(valgtPizza)));
+            stat.skrivStatistik(valgtePizzaString);
 
-            System.out.println("Vil du tilføje endnu en pizza? (1 for JA og 2 for NEJ");
+            System.out.print("Vil du tilføje endnu en pizza? 1 for JA og 2 for NEJ): ");
 
-            int merePizza = sc.nextInt();
-            if (merePizza == 2) {
+            bestilleMere();
 
-                janej = false;
-            } else {
-                System.out.println("Indtast nummeret på pizzaen der skal tilføjes til bestillingen");
-            }
         }
+     //   bestillingsListe.add(denneBestilling);
 
+    }
+
+    protected void bestilleMere() {
+        int merePizza = sc.nextInt();
+        switch (merePizza) {
+            case 1:
+                System.out.print("Indtast nummeret på pizzaen der skal tilføjes til bestillingen: ");
+                break;
+            case 2:
+                bestilMere = false;
+                break;
+            default:
+                System.out.println("Indtastningen blev ikke genkendt. Tast 1 for JA og 2 for NEJ");
+                bestilleMere();
+        }
     }
 
     public void visBestillinger() throws IOException {
-        System.out.println(bestillingsListe.toString());
+
+        for (int i = 0; i < bestillingsListe2.size(); i++) {
+
+            System.out.println(bestillingsListe2.get(i));
+            
+        }
 
     }
-
 }
