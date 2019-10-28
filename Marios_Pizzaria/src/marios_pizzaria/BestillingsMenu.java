@@ -14,10 +14,6 @@ public class BestillingsMenu {
 
         //Init TilFoejBestilling klassen
         TilfoejBestilling tilfoej = new TilfoejBestilling();
-<<<<<<< HEAD
-        
-=======
->>>>>>> origin/master
 
         System.out.println("\n");
         System.out.println("*** Bestilling af Pizza ***");

@@ -28,13 +28,7 @@ public class Menukort {
             menukortArr.add(strCurrentLine);
         }
     }
-
-<<<<<<< HEAD
-    public String getPizza(int i){
-=======
     protected String getPizza(int i){
-
->>>>>>> origin/master
         return menukortArr.get(i-1);
     }
 
