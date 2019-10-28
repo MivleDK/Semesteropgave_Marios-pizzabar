@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 package marios_pizzaria;
 
+=======
+>>>>>>> origin/master
 /*
  CPH Business 2019
 Semesteropgave Marios-pizzabar
 Alexander Pihl, Benjamin Iglesias, Mick Larsen, Morten Rasmussen
+<<<<<<< HEAD
  /
 package marios_pizzaria;
 
@@ -49,3 +53,14 @@ public class Statistik {
         }
     }
 }
+=======
+ */
+package marios_pizzaria;
+
+/*
+ * @author Amazingh0rse
+ */
+public class Statistik {
+
+}
+>>>>>>> origin/master

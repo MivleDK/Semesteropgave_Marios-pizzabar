@@ -1,28 +1,15 @@
-# Semesteropgave_Marios-pizzabar
+# Semesteropgave: Marios pizzabar
 
-## Opgavefordeling<br>
+## DATC 2019<br>
+Alexander, Benjamin, Mick, Morten
 
-#### Alexander
+- opret bestilling med telefonnummer
+- Nice-to-have: Skriv bestillingsliste til .txt
+- fjern bestilling (telefonnummer)
+- Implementer statistik
+- Implementer test 
 
-- Mail til tess vedr. opgaveformulering
-- Class: Afhentning
+### Kendte fejl<br>
 
-#### Benjamin
+- Tilføjer man en pizza som ikke findes på kortet (>15) crasher programmet
 
-- Domain model
-- Class: pizza
-- Class: SuperPizza
-
-#### Mick
-
-- Rette UML
-- Finish på user cases
-- Class: Bestilling
-- Class: Bestillingsliste
-- Class: Statistik
-
-#### Morten
-
-- Oprette netbeans projekt og ligge det på github
-  Skal indeholde alle klasse-filer så gruppen kan arbejde med hver sin(e) source
-- Class: Menu
