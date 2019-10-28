@@ -32,6 +32,7 @@ public class TilfoejBestilling {
         Scanner sc = new Scanner(System.in);
         String valgtPizza = sc.next();
         bestillingsListe.add(menu.getPizza(Integer.parseInt(valgtPizza)));
+        menu2.visClear();
         menu2.visLogo();
         System.out.println("");
         System.out.println("****************************************************************************************");
