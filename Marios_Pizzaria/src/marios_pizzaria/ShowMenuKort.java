@@ -15,7 +15,7 @@ import javax.swing.table.*;
 
 public class ShowMenuKort {
 
-    public void ShowMenuKort() {
+    protected void ShowMenuKort() {
         // Opretter data til tabellen
         String[] headings
                 = new String[]{"Nummer", "Navn", "Pris", "Ingrediens", "Ingrediens", "Ingrediens", "Ingrediens", "Ingrediens", "Ingrediens", "Ingrediens"};
@@ -42,8 +42,8 @@ public class ShowMenuKort {
         frame.add(new JScrollPane(table));
 
         ///*  Lukker programmet hvis du lukker vinduet
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        //frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         // */
         frame.setSize(800, 300);            //Sætter dimensions på Jframe
         frame.setVisible(true);

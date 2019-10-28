@@ -1,5 +1,13 @@
+/*
+ CPH Business 2019
+Semesteropgave Marios-pizzabar
+Alexander Pihl, Benjamin Iglesias, Mick Larsen, Morten Rasmussen
+ */
 package marios_pizzaria;
 
+/*
+ * @author Mick Larsen & Morten Rasmussen
+ */
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -12,19 +20,23 @@ public class BestillingsMenu {
      */
     protected void visBestillingsMenu() throws IOException {
 
+        Menu newMenu = new Menu();
+        newMenu.visMenu1();
+
         //Init TilFoejBestilling klassen
         TilfoejBestilling tilfoej = new TilfoejBestilling();
 
-        System.out.println("\n");
-        System.out.println("*** Bestilling af Pizza ***");
-        System.out.println("Tast 1 for at tilføje en ny ordre");
-        System.out.println("Tast 2 for at fjerne en ordre");
-        System.out.println("Tast 3 for at se menukortet");
-        System.out.println("Tast 4 for at se bestillingslisten");
+        System.out.println("");
+        System.out.println("Bestilling af Pizza");
+        System.out.println("Tryk 1 for at tilføje en ny ordre");
+        System.out.println("Tryk 2 for at fjerne en ordre");
+        System.out.println("Tryk 3 for at se bestillingslisten");
+        System.out.println("Tryk 4 for at se menukortet i et vindue for sig selv");
         //System.out.println("Tast 5 for at rette en ordre");
-        System.out.println("\n");
-        System.out.println("Tast 0 for at gå til hovedmenuen");
-
+        System.out.println("");
+        System.out.println("Tryk 0 for at gå til hovedmenuen");
+        System.out.println("****************************************************************************************");
+        System.out.println("Tryk på en tast og derefter Enter: ");
         String menuValg = getInput();
 
         while (!menuValg.equals("q")) {
@@ -44,14 +56,16 @@ public class BestillingsMenu {
                     break;
 
                 case "4":
-                    System.out.println("Q Afslut");
-                    menuValg = "1";
+                    ShowMenuKort newMenuKort = new ShowMenuKort();
+                    newMenuKort.ShowMenuKort();
+                    visBestillingsMenu();
+                    menuValg = "q";
                     break;
 
                 /* Nice-To-Have: Ret en bestilling
                 case "5":
-                
-                break;                
+
+                break;
                  */
                 case "0":
                     menuValg = "q";
@@ -74,7 +88,8 @@ public class BestillingsMenu {
 
     protected void hovedMenu() throws IOException {
         Menu menu = new Menu();
-        menu.visMenu();
+        menu.visMenu1();
+        menu.visMenu2();
         menu.startMenu();
     }
 }
