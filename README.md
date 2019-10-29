@@ -4,9 +4,9 @@
 Alexander, Benjamin, Mick, Morten
 
 - opret bestilling med telefonnummer
-- Nice-to-have: Skriv bestillingsliste til .txt
+- Sorter bestillingsliste efter afhentningstidspunkt
 - fjern bestilling (telefonnummer)
-- Implementer statistik
+- Nice-to-have: Skriv bestillingsliste til .txt
 - Implementer test 
 
 ### Kendte fejl<br>
