@@ -1,7 +1,7 @@
-package marios_pizzaria;
+package marios_pizzaria; 
 
-/**
- * @Author: Mick Larsen
+/*
+*@Author: Mick Larsen
  *
  * bestillinger klassen håndterer bestillingen
  */
@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class TilfoejBestilling {
 
-    protected TilfoejBestilling() throws IOException {
+    public TilfoejBestilling() throws IOException {
     }
 
     //init menukort objekt så pizza kan hentes
@@ -22,30 +22,25 @@ public class TilfoejBestilling {
 
     //Init array til at holde alle bestillinger
     ArrayList<String> bestillingsListe = new ArrayList<>();
+    //Init statistik klasse til at opdatere statistik
 
-    protected void tilfoejBestilling() throws IOException {
-        Menu menu2 = new Menu();
-        menu2.visClear();
-        menu2.visLogo();
+    public void tilfoejBestilling() throws IOException {
         System.out.println("Indtast nummeret på pizzaen der skal tilføjes til bestillingen");
-
         Scanner sc = new Scanner(System.in);
         String valgtPizza = sc.next();
         bestillingsListe.add(menu.getPizza(Integer.parseInt(valgtPizza)));
-        menu2.visClear();
-        menu2.visLogo();
-        System.out.println("");
-        System.out.println("****************************************************************************************");
-        System.out.println("\t      " + "Nr Navn       Kr Ingredienser");
         System.out.println("Du har valgt: " + menu.getPizza(Integer.parseInt(valgtPizza)));
-        System.out.println("****************************************************************************************");
-        bestillingsMenu.visBestillingsMenuNoClear();
+
+
+        Statistik stat = new Statistik();
+        stat.skrivStatistik(menu.getPizza(Integer.parseInt(valgtPizza)));
+
+        bestillingsMenu.visBestillingsMenu();
 
     }
 
-    protected void visBestillinger() throws IOException {
+    public void visBestillinger() throws IOException {
         System.out.println(bestillingsListe.toString());
 
     }
-
 }

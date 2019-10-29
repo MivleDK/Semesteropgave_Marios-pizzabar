@@ -1,3 +1,4 @@
+
 /*
  CPH Business 2019
 Semesteropgave Marios-pizzabar
@@ -9,15 +10,18 @@ import java.io.IOException;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+    public class Main {
 
-        Menu newMenu = new Menu();
-        newMenu.visClear();
-        newMenu.visLogo();
-        newMenu.visMenu1();
-        newMenu.startMenu();
+        public static void main(String[] args) throws IOException {
 
-        //bestillingsMenu bestillingsmenu = new bestillingsMenu();
-        //bestillingsmenu.visBestillingsMenu();
+            Menu newMenu = new Menu();
+
+            newMenu.visClear();
+            newMenu.visLogo();
+            newMenu.visMenu1();
+            newMenu.startMenu();
+
+            //bestillingsMenu bestillingsmenu = new bestillingsMenu();
+            //bestillingsmenu.visBestillingsMenu();
+        }
     }
-}

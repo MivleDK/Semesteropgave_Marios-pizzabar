@@ -6,41 +6,16 @@ Alexander Pihl, Benjamin Iglesias, Mick Larsen, Morten Rasmussen
 package marios_pizzaria;
 
 /*
- * @author Morten Rasmussen
+ * @author Amazingh0rse
  */
 import java.io.IOException;
 import java.util.Scanner;
 
 public class Menu {
 
-    protected static Scanner scan = new Scanner(System.in);
+    public static Scanner scan = new Scanner(System.in);
 
-    protected void visClear() {                 //clear consollen
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-    }
-
-    protected void visLogo() {      //Viser firma logoet
+    public void visMenu() {
         System.out.println("****************************************************************************************");
         System.out.println("*  __  __               _                        _                  _                  *");
         System.out.println("* |  \\/  |             (_)                      (_)                | |                 *");
@@ -51,22 +26,16 @@ public class Menu {
         System.out.println("*                                        | |                                           *");
         System.out.println("*                                        |_|                                           *");
         System.out.println("****************************************************************************************");
-
-    }
-
-    protected void visMenu1() {             //viser hovedemenuen
-        System.out.println("");
-        System.out.println("Hovedemenu");
-        System.out.println("Tryk 1 for at se Bestillingslisten");
-        System.out.println("Tryk 2 for at få vist menukortet i et vindue for sig selv");
-        System.out.println("Tryk 3 for at få vist statistik");
-        System.out.println("");
-        System.out.println("Tryk Q for at afslutte programmet");
+        System.out.println("1 Tilføj Bestilling");
+        System.out.println("2 Fjern Bestilling");
+        System.out.println("3 Vis menukort");
+        System.out.println("4 Vis statistik");
+        System.out.println();
+        System.out.println("Q Afslut");
         System.out.println("****************************************************************************************");
-        System.out.println("Tryk på en tast og derefter Enter: ");
     }
 
-    protected void startMenu() throws IOException {
+    public void startMenu() throws IOException {
         String valg = "1";
         valg = getInput();
 
@@ -76,40 +45,44 @@ public class Menu {
                 bestillingsmenu.visBestillingsMenu();
                 valg = "q";
                 break;
-            case "2":       //Viser menukortet i en GUI for sig selv
-                ShowMenuKort newMenuKort = new ShowMenuKort();
-                newMenuKort.ShowMenuKort();
+            case "2":
+                System.out.println("Virker ikke endnu");
                 valg = "q";
                 break;
             case "3":
-                System.out.println("Statistik virker ikke endnu");
+                System.out.println("Virker ikke endnu");
                 valg = "q";
                 break;
 
-            /*
-                case "4": //ik i brug
-                ShowMenuKort newMenuKort = new ShowMenuKort();
-                newMenuKort.ShowMenuKort();
-                valg = "q";
-                break;
+            /* @MLA: Viser menukortet i en GUI for sig selv.
+                    ShowMenuKort newMenuKort = new ShowMenuKort();
+                    newMenuKort.ShowMenuKort();
+                    visMenu();
+                    valg = getInput();
              */
+            case "4":
+                Statistik vis = new Statistik();
+                vis.visStatistik();           
+                //System.out.println("Virker ikke endnu");
+                //valg = "q";
+                break;
+
             case "q":
                 //valg = "q";
                 System.exit(0);
                 break;
             default:
-                valg = "q";
-                System.out.println("Vælg et gyldigt punkt fra menuen");
+                valg = "z";
+                System.out.println("Vælg et punkt der findes på menuen");
                 startMenu();
         }
-        visClear();
-        visLogo();
-        visMenu1();
+
+        visMenu();
         startMenu();
 
     }
 
-    protected static String getInput() {
+    public static String getInput() {
         String valg = scan.nextLine();
         return valg;
     }
