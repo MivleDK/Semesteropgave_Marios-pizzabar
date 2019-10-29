@@ -1,4 +1,3 @@
-
 /*
  CPH Business 2019
 Semesteropgave Marios-pizzabar
@@ -41,24 +40,6 @@ public class BestillingsMenu {
         visBestillingsMenu2();
         //Init TilFoejBestilling klassen
         TilfoejBestilling tilfoej = new TilfoejBestilling();
-
-
-
-
-    protected void visBestillingsMenu() throws IOException {
-
-        //Init TilFoejBestilling klassen
-        TilfoejBestilling tilfoej = new TilfoejBestilling();
-
-        System.out.println("\n");
-        System.out.println("*** Bestilling af Pizza ***");
-        System.out.println("Tast 1 for at tilføje en ny ordre");
-        System.out.println("Tast 2 for at fjerne en ordre");
-        System.out.println("Tast 3 for at se menukortet");
-        System.out.println("Tast 4 for at se bestillingslisten");
-        //System.out.println("Tast 5 for at rette en ordre");
-        System.out.println("\n");
-        System.out.println("Tast 0 for at gå til hovedmenuen");
 
         String menuValg = getInput();
 
@@ -126,13 +107,9 @@ public class BestillingsMenu {
                     break;
 
                 case "2":
-                     == == ==
-                            =  >>> >>> > eb6d8d9040bd28217480bc3c74dc2c3ed761c955
                     System.out.println("Q Afslut");
                     menuValg = "1";
                     break;
-
-                     << << << < HEAD
 
                 case "3":
                     System.out.println("Q Afslut");
@@ -150,40 +127,24 @@ public class BestillingsMenu {
                 case "5":
 
                 break;
-=======
-                /* Nice-To-Have: Ret en bestilling
-                case "5":
-
-                break;
->>>>>>> eb6d8d9040bd28217480bc3c74dc2c3ed761c955
                  */
                 case "0":
                     menuValg = "q";
                     break;
 
                 default:
-                     << << << < HEAD
-
                     System.out.println("Vælg et gyldigt punkt fra menuen");
                     Menu menu3 = new Menu();
                     menu3.visClear();
                     visBestillingsMenuNoClear();
 
-                     == == ==
-                            = System.out.println("Vælg et punkt fra menuen");
-                    visBestillingsMenu();
-                     >>> >>> > eb6d8d9040bd28217480bc3c74dc2c3ed761c955
                     break;
             }
         }
         hovedMenu();
     }
 
-    <<<<<<< HEAD //End of ekstra menu
-
-    =======
->>>>>>> eb6d8d9040bd28217480bc3c74dc2c3ed761c955
-
+    //End of ekstra menu
     protected String getInput() {
         Scanner sc = new Scanner(System.in);
         String menuValg = sc.nextLine();
@@ -192,14 +153,9 @@ public class BestillingsMenu {
 
     protected void hovedMenu() throws IOException {
         Menu menu = new Menu();
-         << << << < HEAD
-
         menu.visClear();
         menu.visLogo();
         menu.visMenu1();
-         == == ==
-                = menu.visMenu();
-         >>> >>> > eb6d8d9040bd28217480bc3c74dc2c3ed761c955
         menu.startMenu();
     }
 }
