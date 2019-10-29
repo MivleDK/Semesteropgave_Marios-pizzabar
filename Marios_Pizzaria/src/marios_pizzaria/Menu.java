@@ -6,16 +6,23 @@ Alexander Pihl, Benjamin Iglesias, Mick Larsen, Morten Rasmussen
 package marios_pizzaria;
 
 /*
- * @author Amazingh0rse
+ * @author Morten Rasmussen
  */
 import java.io.IOException;
 import java.util.Scanner;
 
 public class Menu {
 
-    public static Scanner scan = new Scanner(System.in);
+    protected static Scanner scan = new Scanner(System.in);
 
-    public void visMenu() {
+    protected void visClear() {                 //clear consollen
+
+        for (int i = 0; i < 100; i++) {
+            System.out.println("");
+        }
+    }
+
+    protected void visLogo() {      //Viser firma logoet
         System.out.println("****************************************************************************************");
         System.out.println("*  __  __               _                        _                  _                  *");
         System.out.println("* |  \\/  |             (_)                      (_)                | |                 *");
@@ -26,61 +33,79 @@ public class Menu {
         System.out.println("*                                        | |                                           *");
         System.out.println("*                                        |_|                                           *");
         System.out.println("****************************************************************************************");
-        System.out.println("1 Tilføj Bestilling");
-        System.out.println("2 Fjern Bestilling");
-        System.out.println("3 Vis menukort");
-        System.out.println("4 Vis statistik");
-        System.out.println();
-        System.out.println("Q Afslut");
-        System.out.println("****************************************************************************************");
+
     }
 
-    public void startMenu() throws IOException {
-        String valg = "1";
+    protected void visMenu1() {             //viser hovedemenuen
+        System.out.println("");
+        System.out.println("Hovedemenu");
+        System.out.println("Tryk 1 for bestillinger");
+        System.out.println("Tryk 2 for at få vist menukortet i et vindue for sig selv");
+        System.out.println("Tryk 3 for at få vist statistik");
+        System.out.println("");
+        System.out.println("Tryk Q for at afslutte programmet");
+        System.out.println("****************************************************************************************");
+        System.out.println("Tryk på en tast og derefter Enter: ");
+    }
+
+    protected void startMenu() throws IOException {
+        String valg = "";
         valg = getInput();
 
         switch (valg) {
             case "1":// deal med s
+                visClear();
+                visLogo();
                 BestillingsMenu bestillingsmenu = new BestillingsMenu();
                 bestillingsmenu.visBestillingsMenu();
                 valg = "q";
                 break;
-            case "2":
-                System.out.println("Virker ikke endnu");
+            case "2":       //Viser menukortet i en GUI for sig selv
+                ShowMenuKort newMenuKort = new ShowMenuKort();
+                newMenuKort.ShowMenuKort();
                 valg = "q";
                 break;
             case "3":
-                System.out.println("Virker ikke endnu");
+
+                visClear();
+                visLogo();
+                System.out.println("Nr\tNavn\t\tPris\tIngredienser");
+                Statistik vis = new Statistik();
+                vis.visStatistik();
+                vis.CountPizza();
+                vis.getNr();
+                visMenu1();
+                startMenu();
                 valg = "q";
                 break;
 
-            /* @MLA: Viser menukortet i en GUI for sig selv.
-                    ShowMenuKort newMenuKort = new ShowMenuKort();
-                    newMenuKort.ShowMenuKort();
-                    visMenu();
-                    valg = getInput();
+            /*
+                case "4": //TEST!!!!! SLET EFTER
+                visClear();
+                visMenu1();
+                startMenu();
+
+                valg = "q";
+                break;
              */
-            case "4":
-                System.out.println("Virker ikke endnu");
-                valg = "q";
-                break;
-
             case "q":
                 //valg = "q";
                 System.exit(0);
                 break;
             default:
-                valg = "z";
-                System.out.println("Vælg et punkt der findes på menuen");
+                valg = "q";
+                System.out.println("Vælg et gyldigt punkt fra menuen");
                 startMenu();
         }
-
-        visMenu();
+        
+        //visClear();
+        visLogo();
+        visMenu1();
         startMenu();
 
     }
 
-    public static String getInput() {
+    protected static String getInput() {
         String valg = scan.nextLine();
         return valg;
     }
