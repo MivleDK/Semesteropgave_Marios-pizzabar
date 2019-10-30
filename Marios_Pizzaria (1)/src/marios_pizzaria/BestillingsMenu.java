@@ -52,8 +52,8 @@ public class BestillingsMenu {
                     break;
 
                 case "2":
-                    System.out.println("kommer snart");
-                    menuValg = "1";
+                    tilfoej.fjernBestilling();
+                    menuValg = "q";
                     break;
 
                 case "3":
