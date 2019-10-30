@@ -1,17 +1,16 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ CPH Business 2019
+Semesteropgave Marios-pizzabar
+Alexander Pihl, Benjamin Iglesias, Mick Larsen, Morten Rasmussen
  */
 package marios_pizzaria;
 
+/*
+ * @author Mick Larsen
+ */
 import java.util.ArrayList;
 
-/**
- *
- * @author mla
- */
-public class Ordre {
+public class Ordre {                                        //Opretter et array over en ordre med tlf nr, afhentningstidspunkt, pizzaer
 
     int afhentningstidspunkt;
     String telefonnummer;
@@ -41,7 +40,7 @@ public class Ordre {
         pizzaer.add(pizza);
     }
 
-    protected void getOrdre() {
+    protected void getOrdre() {                             //printer en ordre
 
         System.out.println("#### Telefonnummer: " + telefonnummer);
         System.out.println("#### Afhentningstidspunkt: " + afhentningstidspunkt);
