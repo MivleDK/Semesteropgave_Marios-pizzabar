@@ -11,7 +11,7 @@ package marios_pizzaria;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class BestillingsMenu {
+public class BestillingsMenu{
 
     /**
      * Forudsætter: Ingenting Metodekald: Kaldes af hovedmenu Output: Sender
@@ -25,7 +25,7 @@ public class BestillingsMenu {
         System.out.println("Tryk 2 for at fjerne en ordre");
         System.out.println("Tryk 3 for at se bestillingslisten");
         System.out.println("Tryk 4 for at se menukortet i et vindue for sig selv");
-        //System.out.println("Tast 5 for at rette en ordre");
+        //System.out.println("Tast 5 for at rette en ordre");           //Buy dlc to unlock
         System.out.println("");
         System.out.println("Tryk 0 for at gå til hovedmenuen");
         System.out.println("****************************************************************************************");
@@ -46,38 +46,33 @@ public class BestillingsMenu {
 
         while (!menuValg.equals("q")) {
             switch (menuValg) {
-                case "1":
+                case "1":                                       //starter en bestilling
                     tilfoej.tilfoejBestilling();
                     menuValg = "q";
                     break;
 
-                case "2":
+                case "2":                                       //fjerner en bestilling
                     tilfoej.fjernBestilling();
                     menuValg = "q";
                     break;
 
-                case "3":
+                case "3":                                       //viser nuværende bestillinger
                     tilfoej.visBestillinger();
                     menuValg = "q";
                     break;
 
-                case "4":
+                case "4":                                       //Viser menukortet i en ekstern GUI
                     ShowMenuKort newMenuKort = new ShowMenuKort();
                     newMenuKort.ShowMenuKort();
                     visBestillingsMenu();
                     menuValg = "q";
                     break;
 
-                /* Nice-To-Have: Ret en bestilling
-                case "5":
-                
-                break;                
-                 */
                 case "0":
                     menuValg = "q";
                     break;
 
-                default:
+                default:                                        //fanger ugyldige valg
                     Menu menu3 = new Menu();
                     menu3.visClear();
                     menu3.visLogo();
@@ -102,32 +97,28 @@ public class BestillingsMenu {
 
         while (!menuValg.equals("q")) {
             switch (menuValg) {
-                case "1":
+                case "1":                                       //starter en bestilling
                     tilfoej.tilfoejBestilling();
+                    menuValg = "q";
                     break;
 
-                case "2":
-                    System.out.println("Q Afslut");
-                    menuValg = "1";
+                case "2":                                       //fjerner en bestilling
+                    tilfoej.fjernBestilling();
+                    menuValg = "q";
                     break;
 
-                case "3":
+                case "3":                                       //viser nuværende bestillinger
                     tilfoej.visBestillinger();
                     menuValg = "q";
                     break;
 
-                case "4":
-                    //ShowMenuKort newMenuKort = new ShowMenuKort();
-                    //newMenuKort.ShowMenuKort();
+                case "4":                                       //Viser menukortet i en ekstern GUI
+                    ShowMenuKort newMenuKort = new ShowMenuKort();
+                    newMenuKort.ShowMenuKort();
                     visBestillingsMenu();
                     menuValg = "q";
                     break;
 
-                /* Nice-To-Have: Ret en bestilling
-                case "5":
-
-                break;
-                 */
                 case "0":
                     menuValg = "q";
                     break;
@@ -143,7 +134,7 @@ public class BestillingsMenu {
         }
     }
 
-    //End of ekstra menu        
+    //End of ekstra menu
     protected String getInput() {
         Scanner sc = new Scanner(System.in);
         String menuValg = sc.nextLine();

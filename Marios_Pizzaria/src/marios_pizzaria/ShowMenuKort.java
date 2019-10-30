@@ -19,7 +19,8 @@ public class ShowMenuKort {
         // Opretter data til tabellen
         String[] headings
                 = new String[]{"Nummer", "Navn", "Pris", "Ingrediens", "Ingrediens", "Ingrediens", "Ingrediens", "Ingrediens", "Ingrediens", "Ingrediens"};
-        Object[][] data = new Object[][]{ //opretter et object med data
+        Object[][] data = new Object[][]{
+            //opretter et object med følgende data
             {"1", "Vesuvio", "57", "Tomatsauce", "Ost", "Skinke", "Oregano", " ", " ", " "},
             {"2", "Amerikaner", "53", "Tomatsauce", "Ost", "Oksefars", "Oregano", " ", " ", " "},
             {"3", "Cacciatore", "57", "Tomatsauce", "Ost", "Pepperoni", "Oregano", " ", " ", " "},
@@ -42,8 +43,8 @@ public class ShowMenuKort {
         frame.add(new JScrollPane(table));
 
         ///*  Lukker programmet hvis du lukker vinduet
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        //frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         // */
         frame.setSize(800, 300);            //Sætter dimensions på Jframe
         frame.setVisible(true);
