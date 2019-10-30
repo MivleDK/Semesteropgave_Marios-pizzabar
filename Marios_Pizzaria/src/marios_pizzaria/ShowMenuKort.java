@@ -8,10 +8,7 @@ package marios_pizzaria;
 /*
  * @author Morten Rasmussen
  */
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
-import javax.swing.table.*;
 
 public class ShowMenuKort {
 
@@ -19,7 +16,8 @@ public class ShowMenuKort {
         // Opretter data til tabellen
         String[] headings
                 = new String[]{"Nummer", "Navn", "Pris", "Ingrediens", "Ingrediens", "Ingrediens", "Ingrediens", "Ingrediens", "Ingrediens", "Ingrediens"};
-        Object[][] data = new Object[][]{ //opretter et object med data
+        Object[][] data = new Object[][]{
+            //opretter et object med følgende data
             {"1", "Vesuvio", "57", "Tomatsauce", "Ost", "Skinke", "Oregano", " ", " ", " "},
             {"2", "Amerikaner", "53", "Tomatsauce", "Ost", "Oksefars", "Oregano", " ", " ", " "},
             {"3", "Cacciatore", "57", "Tomatsauce", "Ost", "Pepperoni", "Oregano", " ", " ", " "},

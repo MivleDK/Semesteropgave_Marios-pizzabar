@@ -1,9 +1,12 @@
+/*
+ CPH Business 2019
+Semesteropgave Marios-pizzabar
+Alexander Pihl, Benjamin Iglesias, Mick Larsen, Morten Rasmussen
+ */
 package marios_pizzaria;
 
-/**
- *
- *
- * bestillinger klassen håndterer bestillingen
+/*
+ * @author Benjamin Iglesias, Mick Larsen, Morten Rasmussen
  */
 import java.io.IOException;
 import java.util.ArrayList;
@@ -23,11 +26,9 @@ public class TilfoejBestilling {
     //Init bestillingsmenu så den kan vises efter en bestilling er håndteret
     BestillingsMenu bestillingsMenu = new BestillingsMenu();
 
-    //  static ArrayList<String> bestillingsListe2 = new ArrayList<>();
     //Tjekker om der skal tilføjes flere pizzaer til samme ordre.
     boolean bestilMere = true;
 
-    //int bestillingsCounter = 0;
     //init scanner til at håndtere alle input
     Scanner sc = new Scanner(System.in);
 
@@ -87,17 +88,13 @@ public class TilfoejBestilling {
             // Mick: Antallet af spaces passer ikke til alle pizzaer
             //@author Morten
             //Grafik til brugervenlighed
-//          menu2.visClear();
-//          menu2.visLogo();
-//          System.out.println("");
             // System.out.println("****************************************************************************************");
             System.out.println("\n\t      " + "Nr Navn       Kr Ingredienser");
             System.out.println("Du har valgt: " + valgtePizzaString);
             System.out.println("");
             // System.out.println("****************************************************************************************");
-//          bestillingsMenu.visBestillingsMenuNoClear();
 
-            //@author Morten
+            //@author Alexander Pihl
             //Opdaterer statistik-filen
             Statistik stat = new Statistik();
             stat.skrivStatistik(valgtePizzaString);

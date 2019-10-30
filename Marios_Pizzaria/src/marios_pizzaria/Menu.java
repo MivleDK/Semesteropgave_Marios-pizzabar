@@ -17,7 +17,7 @@ public class Menu {
 
     protected void visClear() {                 //clear consollen
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 60; i++) {
             System.out.println("");
         }
     }
@@ -36,7 +36,7 @@ public class Menu {
 
     }
 
-    protected void visMenu1() {             //viser hovedemenuen
+    protected void visMenu1() {                 //viser hovedemenuen
         System.out.println("");
         System.out.println("Hovedemenu");
         System.out.println("Tryk 1 for bestillinger");
@@ -53,47 +53,39 @@ public class Menu {
         valg = getInput();
 
         switch (valg) {
-            case "1":// deal med s
+            case "1":                           // Bestillinger
                 visClear();
                 visLogo();
                 BestillingsMenu bestillingsmenu = new BestillingsMenu();
                 bestillingsmenu.visBestillingsMenu();
                 valg = "q";
                 break;
-            case "2":       //Viser menukortet i en GUI for sig selv
+
+            case "2":                           //Viser menukortet i en ekstern GUI
                 ShowMenuKort newMenuKort = new ShowMenuKort();
                 newMenuKort.ShowMenuKort();
                 visClear();
                 valg = "q";
                 break;
-            case "3":
 
+            case "3":                           //viser statistikken
                 visClear();
                 visLogo();
                 System.out.println("Nr\tNavn\t\tPris\tIngredienser");
                 Statistik vis = new Statistik();
                 vis.visStatistik();
                 vis.CountPizza();
-                vis.getNr();
                 visMenu1();
                 startMenu();
                 valg = "q";
                 break;
 
-            /*
-                case "4": //TEST!!!!! SLET EFTER
-                visClear();
-                visMenu1();
-                startMenu();
-
-                valg = "q";
-                break;
-             */
-            case "q":
+            case "q":                           //Quitter programmet
                 //valg = "q";
                 System.exit(0);
                 break;
-            default:
+
+            default:                            //Fanger andre valgmuligheder
                 valg = "q";
                 System.out.println("Vælg et gyldigt punkt fra menuen");
                 startMenu();
@@ -106,7 +98,7 @@ public class Menu {
 
     }
 
-    protected static String getInput() {
+    protected static String getInput() {                //Scanner for næste input
         String valg = scan.nextLine();
         return valg;
     }

@@ -1,3 +1,1 @@
-﻿4 	Carbona 	63 	tomatsauce 	ost kødsauce 	spaghetti 	cocktailpølser 	oregano
-13 	Venezia 	61 	tomatsauce 	ost skinke 	bacon 		oregano
-2 	Amerikaner 	53	tomatsauce 	ost oksefars	oregano
+﻿
