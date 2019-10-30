@@ -10,9 +10,6 @@ package marios_pizzaria;
 /
  * @author Alexander / Morten
  */
-
-
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -42,7 +39,7 @@ public class Statistik {
             bw.flush();
 
         } catch (IOException ex) {
-           System.out.println("Der er sket en fejl.");
+            System.out.println("Der er sket en fejl.");
         }
     }
 
@@ -82,8 +79,8 @@ public class Statistik {
                     //pizzanummer = newMenukort.getNr(linenumber);
                     //pizzapris = (int) newMenukort.getPris(pizzanummer);
                     //System.out.println(pizzanummer);
-}
-
+                }
+                System.out.println("****************************************************************************************");
                 System.out.println("Der er blevet solgt: " + linenumber + " pizzaer");
 
                 lnr.close();

@@ -70,8 +70,8 @@ public class BestillingsMenu {
 
                 /* Nice-To-Have: Ret en bestilling
                 case "5":
-                
-                break;                
+
+                break;
                  */
                 case "0":
                     menuValg = "q";
@@ -143,7 +143,7 @@ public class BestillingsMenu {
         }
     }
 
-    //End of ekstra menu        
+    //End of ekstra menu
     protected String getInput() {
         Scanner sc = new Scanner(System.in);
         String menuValg = sc.nextLine();
