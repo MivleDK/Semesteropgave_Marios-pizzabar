@@ -42,8 +42,8 @@ public class ShowMenuKort {
         frame.add(new JScrollPane(table));
 
         ///*  Lukker programmet hvis du lukker vinduet
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        //frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         // */
         frame.setSize(800, 300);            //Sætter dimensions på Jframe
         frame.setVisible(true);

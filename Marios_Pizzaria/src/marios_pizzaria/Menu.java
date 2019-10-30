@@ -63,6 +63,7 @@ public class Menu {
             case "2":       //Viser menukortet i en GUI for sig selv
                 ShowMenuKort newMenuKort = new ShowMenuKort();
                 newMenuKort.ShowMenuKort();
+                visClear();
                 valg = "q";
                 break;
             case "3":
@@ -97,7 +98,7 @@ public class Menu {
                 System.out.println("Vælg et gyldigt punkt fra menuen");
                 startMenu();
         }
-        
+
         //visClear();
         visLogo();
         visMenu1();
